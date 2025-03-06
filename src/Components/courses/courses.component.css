@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center; /* מרכז את התוכן אופקית */
+    align-items: center; /* מרכז את התוכן אנכית */
+    height: 100vh; /* גובה של 100% מהגובה של החלון */
+    margin: 0; /* מסיר רווחים */
+}
+
+.container {
+    background-color: #e0f7f7; /* צבע רקע בהיר בגוון טורקיז */
+    color: #004d4d; /* צבע טקסט כהה */
+    padding: 20px; /* רווח פנימי */
+    border-radius: 5px; /* פינות מעוגלות */
+    width: 80%; /* רוחב של 80% מההורה */
+    max-width: 600px; /* רוחב מקסימלי */
+}
+
+h3 {
+    margin: 0; /* מסיר רווחים עליונים ותחתונים */
+    font-size: 1.2em; /* גודל טקסט לכותרת */
+}
+
+p {
+    margin: 5px 0; /* רווחים בין טקסטים */
+    font-size: 0.9em; /* גודל טקסט לתיאור */
+}
+
+button {
+    margin-top: 10px; /* רווח מעל הכפתור */
+    background-color: #00bcd4; /* צבע רקע לכפתור */
+    color: white; /* צבע טקסט לבן */
+    border: none; /* ללא גבולות */
+    border-radius: 5px; /* פינות מעוגלות */
+    padding: 10px 15px; /* רווח פנימי לכפתור */
+    cursor: pointer; /* מצביע על כך שהכפתור ניתן ללחיצה */
+    transition: background-color 0.3s; /* מעבר חלק צבע */
+}
+
+button:hover {
+    background-color: #0097a7; /* צבע רקע כהה יותר כאשר מרחפים מעל הכפתור */
+}

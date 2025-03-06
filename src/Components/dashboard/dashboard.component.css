@@ -1,0 +1,28 @@
+.mat-bar {
+    background-color: #333; /* צבע רקע כהה */
+    color: white; /* צבע טקסט לבן */
+    padding: 10px; /* רווח פנימי */
+}
+
+button {
+    background-color: #444; /* צבע רקע כהה לכפתורים */
+    color: white; /* צבע טקסט לבן */
+    border: none; /* ללא גבולות */
+    border-radius: 5px; /* פינות מעוגלות */
+    padding: 8px 12px; /* רווח פנימי לכפתורים */
+    margin-left: 10px; /* רווח בין הכפתורים */
+    cursor: pointer; /* מצביע על כך שהכפתור ניתן ללחיצה */
+    transition: background-color 0.3s; /* מעבר חלק צבע */
+}
+
+button:hover {
+    background-color: #555; /* צבע רקע כהה יותר כאשר מרחפים מעל הכפתור */
+}
+
+.example-spacer {
+    flex: 1; /* מרחיב את ה-space בין הכפתורים */
+}
+
+button:first-of-type {
+    margin-left: auto; /* דוחף את כפתור ה-Logout לצד שמאל */
+}

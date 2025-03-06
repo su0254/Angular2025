@@ -1,0 +1,38 @@
+
+  .example-container {
+    display: flex;
+    flex-direction: column; /* סידור אנכי */
+    align-items: center; /* מרכז את האלמנטים במרכז */
+    justify-content: center; /* מרכז את האלמנטים במרכז גם אנכית */
+    height: 100vh; /* גובה מלא של המסך */
+    padding: 20px; /* הוסף רווח פנימי */
+    box-sizing: border-box; /* כולל את ה-padding ברוחב */
+    /* border: 5px solid black; */
+}
+
+.example-container mat-form-field {
+    margin: 8px 0; /* הוסף מרווח בין השדות */
+    width: 90%; /* רוחב 90% מהקונטיינר */
+    max-width: 400px; /* קבע רוחב מקסימלי */
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+}
+
+input.example-right-align {
+    -moz-appearance: textfield;
+}
+.custom-link {
+  color: blue; /* צבע הטקסט */
+  text-decoration: underline; /* קו תחתון */
+  cursor: pointer; /* מצביע עכבר */
+}
+
+/* הוסיף עיצוב עבור hover */
+.custom-link:hover {
+  color: darkblue; /* צבע כשמעבירים מעל */
+}
+
+  

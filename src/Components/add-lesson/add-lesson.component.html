@@ -1,0 +1,20 @@
+<form [formGroup]="form" class="example-container" (submit)="addLesson($event)">
+    <mat-form-field>
+        <mat-label>Enter the title</mat-label>
+        <input matInput type="text" formControlName="title" />
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Enter the content</mat-label>
+        <input matInput type="text" formControlName="content" />
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Enter the identity of the course</mat-label>
+        <input matInput type="text" formControlName="courseId" />
+        
+    </mat-form-field>
+    <section>
+        <div class="example-button-row">
+            <button mat-flat-button type="submit">Add </button>
+        </div>
+    </section>
+</form>

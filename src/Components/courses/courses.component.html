@@ -1,0 +1,33 @@
+<mat-list role="list">
+
+    <mat-toolbar class="mat-bar">
+
+        <span>Courses-Online</span>
+        <span class="example-spacer"></span>
+        @if(roleUser==='teacher') {
+        <button mat-raised-button color="primary" (click)="addCourse()">Add Course</button>
+        }
+    </mat-toolbar>
+
+    @for (course of (courses$|async); track course.id) {
+    <div>
+        <button (click)="showLessons(course)">
+            <mat-list-item role="listitem">
+                <h3 mat-line>{{course.title}}</h3>
+                <p mat-line>{{course.description}}</p>
+            </mat-list-item>
+        </button>
+        <button mat-raised-button color="black" (click)="enroll(course)">Enroll</button>
+        <button mat-raised-button color="black" (click)="unenroll(course)">Unenroll</button>
+        @if(roleUser==='teacher') {
+        <button mat-raised-button color="black" (click)="deleteCourse(course)">Delete</button>
+        <button mat-raised-button color="black" (click)="editCourse(course)">Edit</button>
+        }
+    </div>
+    }
+    @empty {
+    <mat-list-item role="listitem">
+        <h3 mat-line>No courses available</h3>
+    </mat-list-item>
+    }
+</mat-list>
