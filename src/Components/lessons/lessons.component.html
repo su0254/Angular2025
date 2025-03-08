@@ -16,6 +16,9 @@
         @if(roleUser==='teacher') {
         <button mat-raised-button color="primary" (click)="editLesson(lesson.lessonId)">Edit</button>
         <button mat-raised-button color="warn" (click)="deleteLesson(lesson.lessonId)">Delete</button>
+        @if(lessonId){
+            <app-update-lesson [lessonId]="lesson.lessonId"></app-update-lesson>
+        }
         }
     </div>
     }

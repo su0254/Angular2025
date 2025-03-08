@@ -10,15 +10,18 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { User } from '../../Models/User';
+import { UpdateLessonComponent } from "../update-lesson/update-lesson.component";
 
 @Component({
   selector: 'app-lessons',
-  imports: [MatListModule, AsyncPipe, MatToolbarModule, MatButtonModule, MatIconModule],
+  imports: [MatListModule, AsyncPipe, MatToolbarModule, MatButtonModule, MatIconModule, UpdateLessonComponent],
   templateUrl: './lessons.component.html',
   styleUrl: './lessons.component.css'
 })
 export class LessonsComponent {
 
+  @Input() courseId=0;
+  lessonId=false;
   lessons$: Observable<Lesson[]> | undefined;
   id: number | undefined;
   roleUser:any;
@@ -41,7 +44,8 @@ export class LessonsComponent {
   }
 
   editLesson(lessonId: Number) {
-    this.router.navigate([`/edit-lesson/${lessonId}`]);
+    //this.router.navigate([`/edit-lesson/${lessonId}`]);
+    this.lessonId=true;
   }
 
   deleteLesson(lessonId: Number) {

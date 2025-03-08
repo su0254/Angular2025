@@ -22,12 +22,22 @@
         @if(roleUser==='teacher') {
         <button mat-raised-button color="black" (click)="deleteCourse(course)">Delete</button>
         <button mat-raised-button color="black" (click)="editCourse(course)">Edit</button>
+
+        }
+        @if(courseId){
+        <app-lessons [courseId]="course.id"></app-lessons>
         }
     </div>
+    @if(updateCourse){
+        <app-update-course [courseId]="course.id"></app-update-course>
     }
+    }
+
     @empty {
     <mat-list-item role="listitem">
         <h3 mat-line>No courses available</h3>
     </mat-list-item>
     }
+
+    
 </mat-list>

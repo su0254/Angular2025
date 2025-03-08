@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -18,10 +18,13 @@ import { LessonService } from '../../Services/lessons/lesson.service';
 })
 export class UpdateLessonComponent {
   form: FormGroup=new FormGroup({});
+  @Input() lessonId:Number|undefined
+  
   constructor(private fb: FormBuilder, private lessonService: LessonService, private router: Router, private route: ActivatedRoute) {
   
-    const lessonId = Number(this.route.snapshot.paramMap.get('id'));
-    this.lessonService.getLessonById(lessonId)?.subscribe(lesson => {
+
+    //const lessonId = Number(this.route.snapshot.paramMap.get('id'));
+    this.lessonService.getLessonById(Number(this.lessonId))?.subscribe(lesson => {
       this.form = this.fb.group({
         title: [lesson?.title, Validators.compose([Validators.required])],
         content: [lesson?.content, [Validators.required]],

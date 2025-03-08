@@ -8,15 +8,18 @@ import { Router } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { LessonsComponent } from '../lessons/lessons.component';
+import { UpdateCourseComponent } from '../update-course/update-course.component';
 
 @Component({
   selector: 'app-courses',
-  imports: [MatListModule, AsyncPipe, MatToolbarModule, MatButtonModule, MatIconModule],
+  imports: [MatListModule, AsyncPipe, MatToolbarModule, MatButtonModule, MatIconModule, LessonsComponent, UpdateCourseComponent],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.css'
 })
 export class CoursesComponent implements OnInit {
-
+  courseId=false;
+  updateCourse=false;
   courses$: Observable<Course[]> | undefined;
   roleUser:any;
   constructor(private courseService:CoursesService, private router:Router) {}
@@ -35,7 +38,8 @@ export class CoursesComponent implements OnInit {
   }
 
   showLessons(course:Course){
-    this.router.navigate([`courses/${course.id}`]);
+    //this.router.navigate([`courses/${course.id}`]);
+    this.courseId=true;
   }
 
   deleteCourse(course:Course){
@@ -47,7 +51,8 @@ export class CoursesComponent implements OnInit {
   }
 
   editCourse(course:Course){
-    this.router.navigate([`edit-course/${course.id}`]);
+    //this.router.navigate([`edit-course/${course.id}`]);
+    this.updateCourse=true;
   }
 
   addCourse(){
