@@ -17,8 +17,8 @@
                 <p mat-line>{{course.description}}</p>
             </mat-list-item>
         </button>
-        <button mat-raised-button color="black" (click)="enroll(course)">Enroll</button>
-        <button mat-raised-button color="black" (click)="unenroll(course)">Unenroll</button>
+        <button appButtonStyle color="black" (click)="enroll(course)">Enroll</button>
+        <button appButtonStyle color="black" (click)="unenroll(course)">Unenroll</button>
         @if(roleUser==='teacher') {
         <button mat-raised-button color="black" (click)="deleteCourse(course)">Delete</button>
         <button mat-raised-button color="black" (click)="editCourse(course)">Edit</button>

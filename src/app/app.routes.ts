@@ -10,6 +10,14 @@ import { UpdateCourseComponent } from '../Components/update-course/update-course
 import { AddCourseComponent } from '../Components/add-course/add-course.component';
 import { AddLessonComponent } from '../Components/add-lesson/add-lesson.component';
 
+export function getPrerenderParams() {
+    return [
+        { id: '1' },
+        { id: '2' },
+    ];
+}
+
+
 export const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
