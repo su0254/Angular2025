@@ -22,12 +22,13 @@ export const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     { path: 'sign_up', component: SignUpComponent },
-    { path: 'courses', component: CoursesComponent},
+    { path: 'courses', component: CoursesComponent },
     // {path: 'courses/:id', component: LessonsComponent},
-    {path:'dashboard', component: DashboardComponent},
-    {path: 'updateUser', component: UpdateUserComponent},
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'updateUser', component: UpdateUserComponent },
     // {path:'edit-lesson/:id', component: UpdateLessonComponent},
     // {path:'edit-course/:id', component: UpdateCourseComponent},
-    {path:'add-course', component:AddCourseComponent},
-    {path: 'add-lesson', component:AddLessonComponent}
+    { path: 'add-course', component: AddCourseComponent },
+    { path: 'add-lesson', component: AddLessonComponent },
+    { path: 'lessons', component: LessonsComponent }
 ];

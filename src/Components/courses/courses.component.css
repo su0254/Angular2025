@@ -1,41 +1,45 @@
-body {
-    display: flex;
-    justify-content: center; /* מרכז את התוכן אופקית */
-    align-items: center; /* מרכז את התוכן אנכית */
-    height: 100vh; /* גובה של 100% מהגובה של החלון */
-    margin: 0; /* מסיר רווחים */
+mat-list {
+    padding: 20px;
 }
 
-.container {
-    background-color: #e0f7f7; /* צבע רקע בהיר בגוון טורקיז */
-    color: #004d4d; /* צבע טקסט כהה */
-    padding: 20px; /* רווח פנימי */
-    border-radius: 5px; /* פינות מעוגלות */
-    width: 80%; /* רוחב של 80% מההורה */
-    max-width: 600px; /* רוחב מקסימלי */
+.card {
+    background-color: #ffffff; /* White background for card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 10px 0; /* Space between cards */
+    padding: 15px; /* Inner padding */
+    transition: transform 0.2s; /* Animation on hover */
 }
 
-h3 {
-    margin: 0; /* מסיר רווחים עליונים ותחתונים */
-    font-size: 1.2em; /* גודל טקסט לכותרת */
+.card:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
 }
 
-p {
-    margin: 5px 0; /* רווחים בין טקסטים */
-    font-size: 0.9em; /* גודל טקסט לתיאור */
+mat-toolbar {
+    background-color: #003366; /* Dark blue background */
+    color: white; /* White text for contrast */
 }
 
 button {
-    margin-top: 10px; /* רווח מעל הכפתור */
-    background-color: #00bcd4; /* צבע רקע לכפתור */
-    color: white; /* צבע טקסט לבן */
-    border: none; /* ללא גבולות */
-    border-radius: 5px; /* פינות מעוגלות */
-    padding: 10px 15px; /* רווח פנימי לכפתור */
-    cursor: pointer; /* מצביע על כך שהכפתור ניתן ללחיצה */
-    transition: background-color 0.3s; /* מעבר חלק צבע */
+    background-color: #003366; /* Dark blue button */
+    color: white; /* White text on buttons */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0097a7; /* צבע רקע כהה יותר כאשר מרחפים מעל הכפתור */
+    background-color: #002244; /* Darker blue on hover */
+}
+
+h3 {
+    color: #003366; /* Dark blue for headings */
+    margin: 0; /* Remove default margin */
+}
+
+p {
+    color: #333333; /* Dark gray for paragraph text */
 }

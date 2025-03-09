@@ -40,6 +40,7 @@ export class CoursesComponent implements OnInit {
   showLessons(course:Course){
     //this.router.navigate([`courses/${course.id}`]);
     this.courseId=true;
+    
   }
 
   deleteCourse(course:Course){

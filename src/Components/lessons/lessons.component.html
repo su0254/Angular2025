@@ -1,26 +1,32 @@
 <mat-list role="list">
     <mat-toolbar class="mat-bar">
 
-        <span>Courses-Online</span>
+        <span>Lessons</span>
         <span class="example-spacer"></span>
-        @if(roleUser==='teacher') {
+        @if(roleUser==='"teacher"') {
         <button mat-raised-button color="primary" (click)="addLesson()">Add Lesson</button>
         }
     </mat-toolbar>
-    @for (lesson of (lessons$|async); track lesson.lessonId) {
+
+    @for (lesson of (lessons$|async); track lesson.id) {
+    <div>fhdzh</div>
+    @if(!lessonId){
     <div>
+        <div>{{lesson.id}} lesson id</div>
         <mat-list-item role="listitem">
-            <h3 mat-line>{{lesson.title}}</h3>
-            <h3 mat-line>{{lesson.content}}</h3>
+            <h3 mat-line>{{lesson.title}} dsad</h3>
+            <h3 mat-line>{{lesson.content}} gsdg</h3>
         </mat-list-item>
-        @if(roleUser==='teacher') {
-        <button mat-raised-button color="primary" (click)="editLesson(lesson.lessonId)">Edit</button>
-        <button mat-raised-button color="warn" (click)="deleteLesson(lesson.lessonId)">Delete</button>
+        @if(roleUser==='"teacher"') {
+        <button mat-raised-button color="primary" (click)="editLesson(lesson.id)">Edit</button>
+        <button mat-raised-button color="warn" (click)="deleteLesson(lesson)">Delete</button>
         @if(lessonId){
-            <app-update-lesson [lessonId]="lesson.lessonId"></app-update-lesson>
+        <app-update-lesson [lessonId]="lesson.id"></app-update-lesson>
         }
+
         }
     </div>
+    }
     }
     @empty {
     <mat-list-item role="listitem">

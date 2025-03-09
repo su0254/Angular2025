@@ -37,7 +37,7 @@ export class AddLessonComponent {
         content: this.form.get('content')?.value,
         courseId: this.form.get('courseId')?.value
       });
-      this.router.navigate(['/lessons']);
+      this.router.navigate(['lessons']);
     }
     else {
       let errorMessage = '';

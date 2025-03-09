@@ -40,7 +40,7 @@ export class UpdateLessonComponent {
     
     if (this.form.valid) {
       this.lessonService.updateLesson({
-        lessonId: Number(this.route.snapshot.paramMap.get('id')),
+        id: Number(this.route.snapshot.paramMap.get('id')),
         title: this.form.get('title')?.value,
         content: this.form.get('content')?.value,
         courseId: this.form.get('courseId')?.value
