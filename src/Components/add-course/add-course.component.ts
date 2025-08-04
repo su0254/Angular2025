@@ -28,7 +28,6 @@ form: FormGroup;
       teacherId: ['', [Validators.required]] 
     });
   }
-
   add(e: Event) {
     e.preventDefault();
     console.log(this.form);
